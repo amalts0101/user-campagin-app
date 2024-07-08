@@ -20,8 +20,8 @@
 
 2. Clone the repository and install dependencies:
     ```bash
-    git clone your-repo-url
-    cd users_app
+    git clone https://github.com/amalts0101/user-campaign-app
+    cd user-campaign-app
     bundle install
     ```
 
