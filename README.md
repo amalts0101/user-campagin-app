@@ -1,24 +1,54 @@
-# README
+# Users Campaign Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+### Database
+1. Setup mysql on local with following commands or if you already have mysql running in local, Skip to Step 3.
+2. ```bash
+   sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+   ```
+   Refer to these links if you're having trouble setting up mysql: Link <a href="https://www.atlantic.net/dedicated-server-hosting/using-mysql-with-ruby-on-rails-app-on-ubuntu-22-04/">#1</a> and <a href="https://www.digitalocean.com/community/tutorials/how-to-use-mysql-with-your-ruby-on-rails-application-on-ubuntu-14-04">#2</a>
 
-* Ruby version
+3. Update `config/database.yml` with your MySQL credentials.
 
-* System dependencies
+### Application
+1. Install Ruby and Rails:
+    ```bash
+    sudo apt-get install ruby-full
+    gem install rails
+    ```
 
-* Configuration
+2. Clone the repository and install dependencies:
+    ```bash
+    git clone your-repo-url
+    cd users_app
+    bundle install
+    ```
 
-* Database creation
+3. Setup the database:
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
 
-* Database initialization
+4. Run the application:
+    ```bash
+    rails server
+    ```
 
-* How to run the test suite
+### API Endpoints
 
-* Services (job queues, cache servers, search engines, etc.)
+- List Users: `GET /users`
+- Add New User: `POST /users`
+  Sample Request body
+  ```
+  {
+    "name": "Alice",
+    "email": "alice@gmail.com",
+    "campaigns_list": [{"campaign_name": "cam1", "campaign_id": "id1"}, {"campaign_name": "cam3", "campaign_id": "id3"}]
+  }
+  ```
+- Filter Users by Campaign Names: `GET /users/filter?campaign_names=cam1,cam2`
 
-* Deployment instructions
-
-* ...
+### Access Deployed Application
+- The application is deployed on EC2 at: `http://your-ec2-public-ip:3000`
