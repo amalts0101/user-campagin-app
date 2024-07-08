@@ -39,8 +39,7 @@
 ### API Endpoints
 
 - List Users: `GET /users`
-- Add New User: `POST /users`
-  Sample Request body
+- Add New User: `POST /users` with the following sample request body.
   ```
   {
     "name": "Alice",
