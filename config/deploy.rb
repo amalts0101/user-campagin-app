@@ -1,4 +1,4 @@
-lock "~> 3.16.0"
+lock "~> 3.19.1"
 set :application, "user_campaign_app"
 set :repo_url, 'https://github.com/amalts0101/user-campaign-app.git'
 set :deploy_to, '/home/ubuntu/user_campaign_app'
