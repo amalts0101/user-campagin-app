@@ -70,3 +70,5 @@ gem 'capistrano-bundler'
 gem 'capistrano-rvm'
 
 gem 'capistrano3-puma'
+
+gem 'uglifier', '>= 1.3.0'
