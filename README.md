@@ -52,4 +52,4 @@
 - Filter Users by Campaign Names: `GET /users/filter?campaign_names=cam1,cam2`
 
 ### Access Deployed Application
-- The application is deployed on EC2 at: `http://your-ec2-public-ip:3000`
+- The application is deployed on EC2 at: `http://3.108.194.191/`
