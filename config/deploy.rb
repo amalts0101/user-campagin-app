@@ -2,6 +2,10 @@ lock "~> 3.19.1"
 set :application, "user_campaign_app"
 set :repo_url, 'https://github.com/amalts0101/user-campaign-app.git'
 set :deploy_to, '/home/ubuntu/user_campaign_app/'
+# Set NODE_OPTIONS for deployment
+set :default_env, {
+  'NODE_OPTIONS' => '--openssl-legacy-provider'
+}
 set :use_sudo, false
 set :branch, 'main'
 set :rails_env, 'production'
