@@ -42,9 +42,11 @@
 - Add New User: `POST /users` with the following sample request body.
   ```
   {
-    "name": "Alice",
-    "email": "alice@gmail.com",
-    "campaigns_list": [{"campaign_name": "cam1", "campaign_id": "id1"}, {"campaign_name": "cam3", "campaign_id": "id3"}]
+    "user": {
+      "name": "Alice",
+      "email": "alice@gmail.com",
+      "campaigns_list": [{"campaign_name": "cam1", "campaign_id": "id1"}, {"campaign_name": "cam3", "campaign_id": "id3"}]
+    }
   }
   ```
 - Filter Users by Campaign Names: `GET /users/filter?campaign_names=cam1,cam2`
