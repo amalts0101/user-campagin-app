@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :show, :update]
+  before_action :set_user, only: [:edit, :show, :update, :destroy]
 
   def index
     @users = User.all
@@ -32,6 +32,26 @@ class UsersController < ApplicationController
       format.html do
         if @user.update(user_params)
           redirect_to user_path(@user), notice: 'User was successfully updated.'
+        else
+          render :new
+        end
+      end
+    end
+  end
+
+  def destroy
+    respond_to do |format|
+      format.json do
+        if @user.destroy
+          render json: @user, status: :updated
+        else
+          render json: @user.errors, status: :unprocessable_entity
+        end
+      end
+
+      format.html do
+        if @user.destroy
+          redirect_to users_path, notice: 'User was successfully destroyed.'
         else
           render :new
         end
