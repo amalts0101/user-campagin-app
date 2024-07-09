@@ -9,8 +9,6 @@
    ```
    Refer to these links if you're having trouble setting up mysql: Link <a href="https://www.atlantic.net/dedicated-server-hosting/using-mysql-with-ruby-on-rails-app-on-ubuntu-22-04/">#1</a> and <a href="https://www.digitalocean.com/community/tutorials/how-to-use-mysql-with-your-ruby-on-rails-application-on-ubuntu-14-04">#2</a>
 
-3. Update `config/database.yml` with your MySQL credentials.
-
 ### Application
 1. Install Ruby and Rails:
     ```bash
@@ -24,14 +22,15 @@
     cd user-campaign-app
     bundle install
     ```
+3. Update `config/database.yml` with your MySQL credentials.
 
-3. Setup the database:
+4. Setup the database:
     ```bash
     rails db:create
     rails db:migrate
     ```
 
-4. Run the application:
+5. Run the application:
     ```bash
     rails server
     ```
