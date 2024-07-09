@@ -2,6 +2,8 @@
   "name": "users-campaign-app",
   "private": true,
   "dependencies": {
+    "@babylonjs/core": "^4.2.0",
+    "@babylonjs/loaders": "^4.2.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
