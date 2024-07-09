@@ -21,7 +21,7 @@
     "style-loader": "2.0.0",
     "turbolinks": "^5.2.0",
     "webpack": "^5.92.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^5.1.4"
   },
   "engines": {
     "node": "18.19.1"
