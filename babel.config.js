@@ -50,6 +50,7 @@ module.exports = function(api) {
       [
         '@babel/plugin-proposal-object-rest-spread',
         {
+          loose: true,
           useBuiltIns: true
         }
       ],

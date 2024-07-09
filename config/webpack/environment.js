@@ -1,3 +1,14 @@
-const { environment } = require('@rails/webpacker')
+const { environment } = require('@rails/webpacker');
 
-module.exports = environment
+environment.loaders.append('babel', {
+  test: /\.js$/,
+  use: [{
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/preset-env'],
+      plugins: ['@babel/plugin-syntax-dynamic-import']
+    }
+  }]
+});
+
+module.exports = environment;
