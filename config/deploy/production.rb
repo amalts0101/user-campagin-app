@@ -1,4 +1,4 @@
-server '172.31.46.27', user: 'ubuntu', roles: %w{web app db}
+server 'ec2-35-154-33-98.ap-south-1.compute.amazonaws.com', user: 'ubuntu', roles: %w{web app db}
 set :ssh_options, {
   forward_agent: true,
   auth_methods: %w[publickey],

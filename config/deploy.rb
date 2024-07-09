@@ -4,7 +4,6 @@ set :repo_url, 'https://github.com/amalts0101/user-campaign-app.git'
 set :deploy_to, '/home/ubuntu/user_campaign_app'
 set :use_sudo, true
 set :branch, 'main'
-set :linked_files, %w{config/master.key config/database.yml}
 set :rails_env, 'production'
 set :keep_releases, 2
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
