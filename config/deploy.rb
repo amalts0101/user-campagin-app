@@ -6,7 +6,7 @@ set :deploy_to, '/home/ubuntu/user_campaign_app/'
 set :default_env, {
   'NODE_OPTIONS' => '--openssl-legacy-provider'
 }
-set :use_sudo, false
+set :use_sudo, true
 set :branch, 'main'
 set :rails_env, 'production'
 set :keep_releases, 2
@@ -19,6 +19,7 @@ set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.access.log"
 set :puma_error_log,  "#{release_path}/log/puma.error.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
+append :rvm_map_bins, 'puma', 'pumactl'
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
