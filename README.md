@@ -3,7 +3,7 @@
 ## Setup
 
 ### Database
-1. Setup mysql on local with following commands or if you already have mysql running in local, Skip to Step 3.
+1. Setup mysql on local with following commands or if you already have mysql running in local, Skip to Application section.
 2. ```bash
    sudo apt-get install mysql-server mysql-client libmysqlclient-dev
    ```
